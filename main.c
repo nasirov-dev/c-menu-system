@@ -42,7 +42,7 @@ void sound(void){
 
 int main(void){
 	
-	
+
 	Data User;
 	
 	printf("Please enter your username:  ");
@@ -61,19 +61,19 @@ while(1){
 	sound();
 	
 	printf("\n------- ALL MEALS --------\n");
-	printf("1. Pizza\n");
-	printf("2. Lahmacun\n");
-	printf("3. Burger\n");
-	printf("4. Mini-Burger\n");
-	printf("5. Crisps\n");
+	printf("1. Pizza = %.2f $\n", User.pizza);
+	printf("2. Lahmacun = %.2f $\n", User.lahmacun);
+	printf("3. Burger = %.2f $\n", User.burger);
+	printf("4. Mini-Burger = %.2f $\n", User.mini_burger);
+	printf("5. Crisps = %.2f $\n", User.crisps);
 	printf("6. Exit\n");
-	
+
 	
 	printf("\n");
 	printf("\n");
 	printf("\n");
 	
-	printf("Your balance is %.2f$\n", User.amount);
+	printf("Your balance is %.2f $\n", User.amount);
 	
 	printf("\n");
 	printf("\n");
@@ -94,7 +94,9 @@ while(1){
 			printf("\nYou chose Pizza!\n");
 			User.amount = User.amount - User.pizza;
 			
-			printf("\nYour balance is %.2f$\n", User.amount);
+			printf("Please wait a bit...");
+			Sleep(3000);
+			printf("\nYour balance is %.2f $\n", User.amount);
 			break;
 			
 			
@@ -104,8 +106,11 @@ while(1){
 	    	printf("\nYou chose Lahmacun!\n");
 	    	
 	    	User.amount = User.amount - User.lahmacun;
-			
-			printf("\nYour balance is %.2f$\n", User.amount);
+	    	
+	    	
+			printf("Please wait a bit...");
+			Sleep(3000);
+			printf("\nYour balance is %.2f $\n", User.amount);
 	    	break;
 	    	
 	    	
@@ -115,8 +120,11 @@ while(1){
 	    	
 	    	printf("\nYou chose Burger!\n");
 	        User.amount = User.amount - User.burger;
-			
-			printf("\nYour balance is %.2f$\n", User.amount);
+	        
+	        
+			printf("Please wait a bit...");
+			Sleep(3000);
+			printf("\nYour balance is %.2f $\n", User.amount);
 	   
 	    	
 	    	break;
@@ -130,7 +138,9 @@ while(1){
 	    	
 	    	User.amount = User.amount - User.mini_burger;
 			
-			printf("\nYour balance is %.2f$\n", User.amount);
+			printf("Please wait a bit...");
+			Sleep(3000);
+			printf("\nYour balance is %.2f $\n", User.amount);
 	    	break;
 	    	
 	    case 5:
@@ -140,7 +150,9 @@ while(1){
 	    	
 	    	User.amount = User.amount - User.crisps;
 			
-			printf("\nYour balance is %.2f$\n", User.amount);
+			printf("Please wait a bit...");
+			Sleep(3000);
+			printf("\nYour balance is %.2f $\n", User.amount);
 	    	break;
 	    
 		case 6:
