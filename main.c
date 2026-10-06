@@ -16,15 +16,15 @@ typedef struct {
 	//
 	int choice;
 	//
-	const double pizza = 100;
+	const double pizza = 10;
 	//
-	const double burger = 50;
+	const double burger = 7;
 	//
-	const double mini_burger = 50;
+	const double mini_burger = 5;
 	//
-	const double lahmacun = 50;
+	const double lahmacun = 2;
 	//
-	const double crisps = 10;
+	const double crisps = 3;
 } Data;
 
 
@@ -32,9 +32,6 @@ typedef struct {
 
 
 void sound(void){
-	
-	
-	
 	
 	Beep(600,500);
 	Beep(500,500);
@@ -52,15 +49,16 @@ int main(void){
 	printf("Please enter your username:  ");
 	scanf("%s", User.username);
 	
-	
-	printf("Welcome to the Pizza disacount!");
+	printf("\n");
+	printf("Welcome %s to the MENU-SYSTEM!", User.username);
 	
 	
 	char List[5][100] = {"Pizza", "Lahmacun", "Burger", "Mini-Burger", "Crisps"};
 	
 	int random_index = rand() % 5;
 	
-	
+while(1){
+
 	sound();
 	
 	printf("\n------- ALL MEALS --------\n");
@@ -69,12 +67,21 @@ int main(void){
 	printf("3. Burger\n");
 	printf("4. Mini-Burger\n");
 	printf("5. Crisps\n");
+	printf("6. Exit\n");
 	
-	printf("Your amount is %lf", User.amount);
 	
+	printf("\n");
+	printf("\n");
+	printf("\n");
 	
-	printf("Please enter your choice:  ");
-	scanf("%d", User.choice);
+	printf("Your balance is %.2f$\n", User.amount);
+	
+	printf("\n");
+	printf("\n");
+	printf("\n"); 
+	
+	printf("Please enter any option:  ");
+	scanf("%d", &User.choice);
 	
 	
 	
@@ -85,37 +92,72 @@ int main(void){
 		case 1:
 			
 			//
-			printf("You chose Pizza!\n");
+			printf("\nYou chose Pizza!\n");
 			User.amount = User.amount - User.pizza;
 			
-			printf("Your balance is %lf", User.amount);
+			printf("\nYour balance is %.2f$\n", User.amount);
+			break;
 			
 			
 	    case 2:
 	    	
 	    	//
-	    	printf("You chose Lahmacun!\n");
+	    	printf("\nYou chose Lahmacun!\n");
+	    	
+	    	User.amount = User.amount - User.lahmacun;
+			
+			printf("\nYour balance is %.2f$\n", User.amount);
+	    	break;
 	    	
 	    	
 	    case 3:
 	    	
 	    	//
+	    	
+	    	printf("\nYou chose Burger!\n");
+	        User.amount = User.amount - User.burger;
+			
+			printf("\nYour balance is %.2f$\n", User.amount);
 	   
-	   
-	    	printf("You chose Burger!\n");
+	    	
+	    	break;
 	    	
 	    case 4:
 	    	
 	    	
 	    	//
-	    	printf("You chose Mini-Burger!\n");
+	    	
+	    	printf("\nYou chose Mini-Burger!\n");
+	    	
+	    	User.amount = User.amount - User.mini_burger;
+			
+			printf("\nYour balance is %.2f$\n", User.amount);
+	    	break;
 	    	
 	    case 5:
 	    	
 	    	//
-	    	printf("You chose Crisps!\n");
-	}
-	
+	    	printf("\nYou chose Crisps!\n");
+	    	
+	    	User.amount = User.amount - User.crisps;
+			
+			printf("\nYour balance is %.2f$\n", User.amount);
+	    	break;
+	    
+		case 6:
+			
+			//
+			printf("\nGoodbye %s, Thank you for choosing us!", User.username);
+			return 0;
+			
+	    default:
+	    	
+	    	//
+	    	
+	    	printf("\nPlease enter a  valid number!\n");
+	    	break;
+	 }
+   }
 }
 
 
