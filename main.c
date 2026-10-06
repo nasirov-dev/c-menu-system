@@ -10,7 +10,7 @@ typedef struct {
 	
 	
 	
-	double amount = 500;
+	double amount = 100;
 	//
 	char username[100];
 	//
