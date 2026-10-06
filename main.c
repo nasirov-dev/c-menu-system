@@ -43,7 +43,7 @@ void sound(void){
 
 int main(void){
 	
-	srand(unsigned(time(NULL)));
+	
 	Data User;
 	
 	printf("Please enter your username:  ");
@@ -55,7 +55,7 @@ int main(void){
 	
 	char List[5][100] = {"Pizza", "Lahmacun", "Burger", "Mini-Burger", "Crisps"};
 	
-	int random_index = rand() % 5;
+	
 	
 while(1){
 
